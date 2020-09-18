@@ -1,0 +1,84 @@
+
+<mat-card class="example-card">
+    
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)"> 
+      <mat-card-title>Sign Up</mat-card-title>
+      
+
+    
+      <mat-form-field>
+        <input type="firstname" 
+        matInput placeholder="first name" 
+        ngModel name="firstname">  
+    </mat-form-field>
+
+    
+    <mat-form-field>
+        <input type="lastname" 
+        matInput placeholder="last name" 
+        ngModel name="lastname">  
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="email" 
+        matInput placeholder="your email" 
+        ngModel name="email"
+        email required>  
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <input type="phone" 
+        matInput placeholder="your phone number" 
+        ngModel name="phone">  
+    </mat-form-field>
+    <br>
+
+    <mat-form-field hintLabel="should be at least">
+        <input type="password" 
+        matInput placeholder="your password" 
+        ngModel name="password"
+        required
+        minlength="6"
+        #pwInput="ngModel">
+
+        <mat-hint align="end"> {{pwInput.value?.length}}/ 6 </mat-hint>
+    </mat-form-field>
+
+    
+    <mat-form-field hintLabel="should be at least">
+        <input type="password" 
+        matInput placeholder="confirm password" 
+        ngModel name="password"
+        required
+        minlength="6"
+        #pwInput="ngModel">
+
+        <mat-hint align="end"> {{pwInput.value?.length}}/ 6 </mat-hint>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <input matInput placeholder="Your Date of Birth" [matDatepicker]="picker" [max]="maxDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <br>
+
+
+        <mat-checkbox>Agree to Terms and Conditions</mat-checkbox>
+    
+
+    <br>
+
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-raised-button color="warn">Reset</button>
+
+    
+    </form>
+
+</mat-card>

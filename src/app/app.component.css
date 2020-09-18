@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  .title{
+      color: gold;
+
+      margin-left: 10px;
+  }
+
+ 

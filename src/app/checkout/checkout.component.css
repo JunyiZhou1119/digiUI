@@ -1,0 +1,24 @@
+.example-card {
+    max-width: 400px;
+    justify-content: center;
+    margin: auto;
+    transition: all 1s;
+    margin-top: 50px;
+  }
+
+
+.example-card:hover {
+    transform: scale(1.1);
+}
+
+  h1{
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to left, violet, indigo, blue, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .example-header-image {
+    background-image: url('https://imgur.com/gCQVPCt');
+    background-size: cover;
+  }

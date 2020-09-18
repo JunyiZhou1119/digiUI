@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+
+  <button mat-icon-button class="example-icon" >
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon class="menuicon">menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+
+  <a routerLink="/login">
+    <button *ngIf="!isAuth" mat-menu-item>
+      <mat-icon>login</mat-icon>
+      <span>login</span>
+    </button>
+    </a>
+  
+    <a routerLink="/signup">
+    <button *ngIf="!isAuth" mat-menu-item>
+      <mat-icon>fingerprint</mat-icon>
+      <span>signup</span>
+    </button>
+  </a>
+  
+    <a routerLink="/checkout">
+    <button *ngIf="isAuth" mat-menu-item>
+      <mat-icon>rowing</mat-icon>
+      <span>Digi Main</span>
+    </button>
+    </a>
+
+</mat-menu>
+  </button>
+
+  <a routerLink="/">
+  <span class="title">DigiDex</span>
+  </a>
+
+  <span class="example-spacer"></span>
+
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+
+  <button *ngIf="isAuth">
+    <a style="cursor:pointer" (click)="onLogout()">LogOut</a>
+  </button>
+  
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
